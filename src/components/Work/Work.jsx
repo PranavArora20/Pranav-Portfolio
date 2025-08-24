@@ -1,8 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { projects } from "../../constants";
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        handleCloseModal();
+      }
+    };
+
+    if (selectedProject) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [selectedProject]);
 
   const handleOpenModal = (project) => {
     setSelectedProject(project);
@@ -46,7 +63,14 @@ const Work = () => {
               <h3 className="text-2xl font-bold text-white mb-2">
                 {project.title}
               </h3>
-              <p className="text-gray-500 mb-4 pt-4 overflow-hidden text-sm leading-relaxed" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
+              <p
+                className="text-gray-500 mb-4 pt-4 overflow-hidden text-sm leading-relaxed"
+                style={{
+                  display: "-webkit-box",
+                  WebkitLineClamp: 3,
+                  WebkitBoxOrient: "vertical",
+                }}
+              >
                 {project.description}
               </p>
               <div className="mb-4">
@@ -67,7 +91,10 @@ const Work = () => {
       {/* Modal Container */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4">
-          <div className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-4xl overflow-hidden relative">
+          <div
+            ref={modalRef}
+            className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-4xl overflow-hidden relative"
+          >
             <div className="flex justify-end p-4 absolute top-0 right-0 z-10">
               <button
                 onClick={handleCloseModal}
