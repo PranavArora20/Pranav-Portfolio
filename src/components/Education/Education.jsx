@@ -12,7 +12,8 @@ const Education = () => {
         <h2 className="text-4xl font-bold text-white">EDUCATION</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
         <p className="text-gray-400 mt-4 text-lg font-semibold">
-          My education has been a journey of learning and development. Here are the details of my academic background
+          My education has been a journey of learning and development. Here are
+          the details of my academic background
         </p>
       </div>
 
@@ -64,8 +65,12 @@ const Education = () => {
                       {edu.school}
                     </h4>
                     <p className="text-sm text-gray-500">{edu.date}</p>
-                    <p className="text-gray-400 font-bold">Grade: {edu.grade}</p>
-                    <p className="text-gray-400 text-sm leading-relaxed">{edu.desc}</p>
+                    <p className="text-gray-400 font-bold">
+                      Grade: {edu.grade}
+                    </p>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      {edu.desc}
+                    </p>
                   </div>
                 </div>
               </div>
