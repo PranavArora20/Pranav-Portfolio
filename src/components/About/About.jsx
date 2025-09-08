@@ -47,15 +47,15 @@ const About = () => {
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight break-words">
             Hi, I am
           </h1>
           {/* Name */}
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight break-words">
             Pranav Arora
           </h2>
           {/* Skills Heading with Typing Effect */}
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight break-words">
             {/* <span className="text-white">I am a </span> */}
             <TypingEffect
               text={[
@@ -73,7 +73,7 @@ const About = () => {
             />
           </h3>
           {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed break-words">
             I'm a detail-oriented Full Stack Web Developer with hands-on
             experience in building responsive and scalable applications. Skilled
             in React, Node.js, and MongoDB, I specialize in creating seamless
@@ -97,14 +97,14 @@ const About = () => {
         {/* Right Side */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <TiltEffect
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
+            className="aspect-square w-40 sm:w-56 md:w-[28rem] border-4 border-purple-700 rounded-full"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             scale={1.05}
           >
             <img
               src={profileImage}
-              alt="Tarun Kaushik"
+              alt="Pranav Arora"
               className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
             />
           </TiltEffect>

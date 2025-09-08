@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       {/* <div className="text-6xl text-red-700">Hello From App</div> */}
-      <div className="bg-[#050414]">
+      <div className="bg-[#050414] overflow-x-hidden">
         <BlurBlob
           position={{ top: "35%", left: "20%" }}
           size={{ width: "30%", height: "40%" }}
@@ -28,17 +28,17 @@ function App() {
           {/* Landing Page Section */}
           <section id="home" className="min-h-screen flex items-center justify-center px-4 md:px-[7vw] lg:px-[20vw]">
             <div className="text-center">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight break-words">
                 <span className="text-[#8245ec]">&lt;</span>
                 <span className="text-white">Pranav</span>
                 <span className="text-[#8245ec]">/</span>
                 <span className="text-white">Arora</span>
                 <span className="text-[#8245ec]">&gt;</span>
               </h1>
-              <p className="text-xl sm:text-2xl md:text-3xl text-gray-400 mb-8 font-semibold">
+              <p className="text-lg sm:text-2xl md:text-3xl text-gray-400 mb-8 font-semibold break-words">
                 Full Stack Developer & UI/UX Designer
               </p>
-              <p className="text-lg sm:text-xl text-gray-500 mb-12 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-500 mb-12 max-w-3xl mx-auto leading-relaxed break-words">
                 Passionate about creating innovative web solutions and turning ideas into reality through code.
                 Specialized in modern web technologies and user experience design.
               </p>
