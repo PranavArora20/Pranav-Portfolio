@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans pt-32 md:pt-36 lg:pt-40 pb-16"
+      className="px-4 md:px-[7vw] lg:px-[20vw] font-sans pt-32 md:pt-36 lg:pt-40 pb-16"
       style={{ scrollMarginTop: "100px" }}
     >
       <div className="flex flex-col-reverse md:flex-row justify-between items-center mb-8">

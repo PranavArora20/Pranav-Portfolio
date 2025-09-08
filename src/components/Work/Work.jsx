@@ -32,7 +32,7 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans relative"
+      className="py-24 pb-24 px-4 md:px-[7vw] lg:px-[20vw] font-sans relative"
     >
       {/* Section Title */}
       <div className="text-center mb-16">
@@ -109,7 +109,7 @@ const Work = () => {
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full max-w-2xl object-contain rounded-xl shadow-2xl"
+                  className="w-full max-w-2xl max-h-[60vh] object-contain rounded-xl shadow-2xl"
                 />
               </div>
               <div className="lg:p-8 p-6">

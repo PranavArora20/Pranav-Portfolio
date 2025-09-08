@@ -26,7 +26,7 @@ function App() {
         <div className="relative pt-20">
           <Navbar />
           {/* Landing Page Section */}
-          <section id="home" className="min-h-screen flex items-center justify-center px-[7vw] md:px-[7vw] lg:px-[20vw]">
+          <section id="home" className="min-h-screen flex items-center justify-center px-4 md:px-[7vw] lg:px-[20vw]">
             <div className="text-center">
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="text-[#8245ec]">&lt;</span>

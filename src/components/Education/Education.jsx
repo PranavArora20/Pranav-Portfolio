@@ -5,7 +5,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-3"
+      className="py-24 pb-24 px-4 md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-3"
     >
       {/* Section Title */}
       <div className="text-center mb-16">
@@ -20,7 +20,7 @@ const Education = () => {
       {/* Education Timeline */}
       <div className="relative">
         {/* Vertical line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-white h-full"></div>
+        <div className="absolute left-6 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-1 bg-white h-full z-0"></div>
 
         {/* Education Entries */}
         {education.map((edu, index) => (
@@ -31,19 +31,19 @@ const Education = () => {
             }`}
           >
             {/* Timeline Circle */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
+            <div className="absolute left-6 sm:left-1/2 sm:transform sm:-translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-10 h-10 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
               <img
                 src={edu.img}
                 alt={edu.school}
-                className="w-8 h-8 sm:w-12 sm:h-12 object-contain rounded-full"
+                className="w-6 h-6 sm:w-12 sm:h-12 object-contain rounded-full"
               />
             </div>
 
             {/* Content Section */}
             <div
-              className={`w-full sm:max-w-md p-6 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
+              className={`w-full sm:max-w-md p-6 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] relative z-10 ${
                 index % 2 === 0 ? "sm:mr-auto sm:ml-0" : "sm:ml-auto sm:mr-0"
-              } sm:ml-20 sm:mr-20 ml-8 transform transition-transform duration-300 hover:scale-105`}
+              } ml-16 sm:ml-20 sm:mr-20 mt-12 sm:mt-0 transform transition-transform duration-300 hover:scale-105`}
             >
               <div className="flex flex-col lg:flex-row gap-6">
                 {/* School Logo Container */}
