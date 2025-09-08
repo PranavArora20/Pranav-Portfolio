@@ -83,6 +83,24 @@ const Work = () => {
                   </span>
                 ))}
               </div>
+              <div className="flex gap-4 flex-wrap" onClick={(e) => e.stopPropagation()}>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 min-w-[9rem] bg-gray-800 hover:bg-purple-800 text-gray-200 lg:px-6 lg:py-3 px-4 py-2 rounded-xl lg:text-lg text-sm font-semibold text-center transition-colors duration-200"
+                >
+                  View Code
+                </a>
+                <a
+                  href={project.webapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 min-w-[9rem] bg-purple-600 hover:bg-purple-800 text-white lg:px-6 lg:py-3 px-4 py-2 rounded-xl lg:text-lg text-sm font-semibold text-center transition-colors duration-200"
+                >
+                  View Live
+                </a>
+              </div>
             </div>
           </div>
         ))}
@@ -129,12 +147,12 @@ const Work = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 flex-wrap">
                   <a
                     href={selectedProject.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-1/2 bg-gray-800 hover:bg-purple-800 text-gray-400 lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center transition-colors duration-200"
+                    className="flex-1 min-w-[10rem] bg-gray-800 hover:bg-purple-800 text-gray-200 lg:px-6 lg:py-3 px-4 py-2 rounded-xl lg:text-lg text-sm font-semibold text-center transition-colors duration-200"
                   >
                     View Code
                   </a>
@@ -142,7 +160,7 @@ const Work = () => {
                     href={selectedProject.webapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-1/2 bg-purple-600 hover:bg-purple-800 text-white lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center transition-colors duration-200"
+                    className="flex-1 min-w-[10rem] bg-purple-600 hover:bg-purple-800 text-white lg:px-6 lg:py-3 px-4 py-2 rounded-xl lg:text-lg text-sm font-semibold text-center transition-colors duration-200"
                   >
                     View Live
                   </a>

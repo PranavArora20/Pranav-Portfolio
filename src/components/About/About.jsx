@@ -4,6 +4,39 @@ import TiltEffect from "../TiltEffect/TiltEffect";
 import profileImage from "../../assets/Profile_Pic.png";
 
 const About = () => {
+  const handleDownloadCv = async (e) => {
+    e.preventDefault();
+    const driveFileId = "115jJMGwZF0KRhoClsZUMoT3jWB-Q0YOF";
+    const resumeDriveUrl =
+      "https://drive.google.com/file/d/115jJMGwZF0KRhoClsZUMoT3jWB-Q0YOF/view?usp=sharing";
+    const directDownloadUrl = `https://drive.google.com/uc?export=download&id=${driveFileId}`;
+
+    const triggerDriveOpen = () => {
+      setTimeout(() => {
+        window.open(resumeDriveUrl, "_blank", "noopener,noreferrer");
+      }, 200);
+    };
+
+    // Open Drive view immediately (no blank tab), and trigger download in background
+    window.open(resumeDriveUrl, "_blank", "noopener,noreferrer");
+
+    try {
+      // Use hidden iframe to trigger Google Drive direct download without CORS issues
+      const iframe = document.createElement("iframe");
+      iframe.style.display = "none";
+      iframe.src = directDownloadUrl;
+      document.body.appendChild(iframe);
+      // Clean up after a short delay
+      setTimeout(() => {
+        try {
+          document.body.removeChild(iframe);
+        } catch (_) {}
+      }, 4000);
+    } catch (_) {
+      // Fallback: open direct download in a new tab if iframe fails
+      window.open(directDownloadUrl, "_blank", "noopener,noreferrer");
+    }
+  };
   return (
     <section
       id="about"
@@ -50,10 +83,8 @@ const About = () => {
             performance.
           </p>
           {/* Resume Button */}
-          <a
-            href="https://drive.google.com/file/d/115jJMGwZF0KRhoClsZUMoT3jWB-Q0YOF/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={handleDownloadCv}
             className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
             style={{
               background: "linear-gradient(90deg, #8245ec, #a855f7)",
@@ -61,7 +92,7 @@ const About = () => {
             }}
           >
             DOWNLOAD CV
-          </a>
+          </button>
         </div>
         {/* Right Side */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
