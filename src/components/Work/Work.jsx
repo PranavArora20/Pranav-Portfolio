@@ -64,12 +64,7 @@ const Work = () => {
                 {project.title}
               </h3>
               <p
-                className="text-gray-500 mb-4 pt-4 overflow-hidden text-sm leading-relaxed"
-                style={{
-                  display: "-webkit-box",
-                  WebkitLineClamp: 3,
-                  WebkitBoxOrient: "vertical",
-                }}
+                className="text-gray-400 mb-4 pt-4 text-sm leading-relaxed"
               >
                 {project.description}
               </p>
