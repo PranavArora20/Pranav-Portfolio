@@ -4,7 +4,7 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
-// import Experience from "./components/Experience/Experience";
+import Experience from "./components/Experience/Experience";
 import Work from "./components/Work/Work";
 import GitHubStats from "./components/GitHubStats/GitHubStats";
 import Education from "./components/Education/Education";
@@ -60,7 +60,7 @@ function App() {
           </section>
           <About />
           <Skills />
-          {/* <Experience /> */}
+          <Experience />
           <Work />
           <GitHubStats />
           <Education />

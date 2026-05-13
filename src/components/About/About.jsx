@@ -8,7 +8,7 @@ const About = () => {
     e.preventDefault();
     const driveFileId = "115jJMGwZF0KRhoClsZUMoT3jWB-Q0YOF";
     const resumeDriveUrl =
-      "https://drive.google.com/file/d/1ekUnluttz1O-U5mf_ei4J41anu8yRrkF/view?usp=drive_link";
+      "https://drive.google.com/file/d/1P9ygwXqU9cgerZ2ElF02ZXiUXzbb5hCb/view?usp=sharing";
     const directDownloadUrl = `https://drive.google.com/uc?export=download&id=${driveFileId}`;
 
     const triggerDriveOpen = () => {

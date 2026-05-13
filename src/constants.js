@@ -1,4 +1,3 @@
-
 // Skills Section Logo's
 import htmlLogo from "./assets/tech_logo/html.png";
 import cssLogo from "./assets/tech_logo/css.png";
@@ -49,6 +48,8 @@ import apj from "./assets/education_logo/apj.png";
 // Project Section Logo's
 import assetvue from "./assets/work_logo/AssetVue.png";
 import taskflow from "./assets/work_logo/Task_Flow.png";
+import healthyhabits from "./assets/work_logo/Healthy_Habits.png";
+import windstream from "./assets/work_logo/WindStream.png";
 // import movierecLogo from "./assets/work_logo/movie_rec.png";
 // import taskremLogo from "./assets/work_logo/task_rem.png";
 // import npmLogo from "./assets/work_logo/npm.png";
@@ -105,8 +106,6 @@ export const SkillsInfo = [
   },
 ];
 
-
-
 export const education = [
   {
     id: 0,
@@ -134,9 +133,8 @@ export const education = [
     grade: "86.2%",
     desc: "I completed my Class 10 education from Apeejay School, Pitampura, Delhi under the CBSE board, with a focus on Science and Computer Applications. My secondary education gave me an early interest in technology and problem-solving, which motivated me to pursue a career in the IT field.",
     degree: "CBSE (X) - Science with Computer Applications",
-  }
+  },
 ];
-
 
 export const projects = [
   {
@@ -146,8 +144,7 @@ export const projects = [
       "Built AssetVue, a React + Redux portfolio tracker with Firebase integration, enabling real-time syncing, automated price updates, asset filtering, and interactive visualizations for actionable investment insights with accessible, dark-mode optimized UI.",
     image: assetvue,
     tags: ["HTML", "CSS", "JavaScript", "React JS", "API"],
-    github:
-      "https://github.com/PranavArora20/Asset-Vue",
+    github: "https://github.com/PranavArora20/Asset-Vue",
     webapp: "https://asset-vue-investment-tracker.netlify.app/",
   },
   {
@@ -156,14 +153,31 @@ export const projects = [
     description:
       "Developed TaskFlow Pro, a scalable employee management system using React and modern web technologies, featuring role-based access, real-time task tracking, and intuitive dashboards to optimize productivity and workflow management",
     image: taskflow,
-    tags: [
-      "React JS",
-      "HTML",
-      "CSS",
-      "JavaScript",
-    ],
-    github: "https://github.com/PranavArora20/TaskFlowPro-Employee-Management-System",
+    tags: ["React JS", "HTML", "CSS", "JavaScript"],
+    github:
+      "https://github.com/PranavArora20/TaskFlowPro-Employee-Management-System",
     webapp: "https://taskflowpero.netlify.app/",
   },
-  
+  {
+    id: 2,
+    title: "HealthyHabits",
+    description:
+      "HealthyHabits helps users build and track healthier routines: log activities and sleep, track meals with nutrition data, set goals, create and join challenges with leaderboards, manage habits and reminders, and engage with the community.",
+    image: healthyhabits,
+    tags: ["React JS", "HTML", "CSS", "JavaScript", "Node JS", "Express JS", "MongoDB"],
+    github:
+      "https://github.com/PranavArora20/HealthyHabits",
+    webapp: "https://healthy-habits-pi.vercel.app/",
+  },
+  // {
+  //   id: 3,
+  //   title: "WindStream",
+  //   description:
+  //     "WindStream is a real-time weather monitoring application that provides users with accurate and up-to-date weather information, forecasts, and alerts.",
+  //   image: windstream,
+  //   tags: ["React JS", "HTML", "CSS", "JavaScript", "Node JS", "Express JS", "MongoDB"],
+  //   github:
+  //     "https://github.com/PranavArora20/HealthyHabits",
+  //   webapp: "https://healthy-habits-pi.vercel.app/",
+  // },
 ];

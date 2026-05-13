@@ -15,20 +15,25 @@ const Experience = () => {
         {/* Experience Item */}
         <div className="bg-gray-900 backdrop-blur-md p-8 rounded-2xl border border-gray-700 shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-            <h3 className="text-2xl font-bold text-white">Full Stack Developer</h3>
-            <span className="text-[#8245ec] font-semibold">2022 - Present</span>
+            <h3 className="text-2xl font-bold text-white">Associate Software Development Engineer</h3>
+            <span className="text-[#8245ec] font-semibold">Nov'25 - Present</span>
           </div>
-          <h4 className="text-xl text-gray-300 mb-2">Company Name</h4>
+          <h4 className="text-xl text-gray-300 mb-2">GlobaLogic</h4>
           <p className="text-gray-400 leading-relaxed">
-            Developed and maintained full-stack web applications using modern technologies.
-            Collaborated with cross-functional teams to deliver high-quality software solutions.
+          <li>Developed and optimized data extraction and transformation workflows using JavaScript, processing product data from 1000+ e-commerce landing pages.</li>
+          <li>Collaborated with cross-functional teams to ensure high-quality data ingestion aligned with Google Shoppin standards, achieving 95%+ accuracy.</li>
+          <li>Supported frontend integration by delivering structured data for dynamic UI rendering in React-based
+          applications, improving overall user experience.</li>
+          <li>Applied efficient data structures and parsing techniques to improve processing speed by 20% and reduce
+          inconsistencies by ~30%.</li>
+
           </p>
         </div>
 
         {/* Add more experience items here */}
-        <div className="text-center text-gray-400">
-          More experience details coming soon...
-        </div>
+        {/* <div className="text-center text-gray-400"> */}
+          {/* More experience details coming soon... */}
+        {/* </div> */}
       </div>
     </section>
   );
