@@ -32,7 +32,13 @@ import netlifyLogo from "./assets/tech_logo/netlify.png";
 import vercelLogo from "./assets/tech_logo/vercel.png";
 import postgreLogo from "./assets/tech_logo/postgre.png";
 import csharpLogo from "./assets/tech_logo/csharp.png";
-
+import junitLogo from "./assets/tech_logo/JUnit.png";
+import googlecloudLogo from "./assets/tech_logo/GoogleCloud.png";
+import dockerLogo from "./assets/tech_logo/Docker.png";
+import postgresqlLogo from "./assets/tech_logo/PostgresSQL.png";
+import kubernetesLogo from "./assets/tech_logo/Kubernetes.png";
+import ApacheKafka from "./assets/tech_logo/ApacheKafka.png";
+import springLogo from "./assets/tech_logo/Spring.png";
 // Experience Section Logo's
 import webverseLogo from "./assets/company_logo/webverse_logo.png";
 import agcLogo from "./assets/company_logo/agc_logo.png";
@@ -67,10 +73,10 @@ export const SkillsInfo = [
       { name: "JavaScript", logo: javascriptLogo },
       { name: "React JS", logo: reactjsLogo },
       { name: "Redux", logo: reduxLogo },
-      // { name: "Next JS", logo: nextjsLogo },
+      { name: "Next JS", logo: nextjsLogo },
       { name: "Tailwind CSS", logo: tailwindcssLogo },
       { name: "Material UI", logo: materialuiLogo },
-      { name: "Bootstrap", logo: bootstrapLogo },
+      { name: "Bootstrap", logo: bootstrapLogo },      
     ],
   },
   {
@@ -78,6 +84,9 @@ export const SkillsInfo = [
     skills: [
       { name: "Node JS", logo: nodejsLogo },
       { name: "Express JS", logo: expressjsLogo },
+      { name: "Spring Boot", logo: springLogo },
+      { name: "Apache Kafka", logo: ApacheKafka },
+      { name: "PostgreSQL", logo: postgresqlLogo },
       { name: "MySQL", logo: mysqlLogo },
       { name: "MongoDB", logo: mongodbLogo },
       { name: "Firebase", logo: firebaseLogo },
@@ -96,6 +105,10 @@ export const SkillsInfo = [
     skills: [
       { name: "Git", logo: gitLogo },
       { name: "GitHub", logo: githubLogo },
+      { name: "Docker", logo: dockerLogo },
+      { name: "Kubernetes", logo: kubernetesLogo },
+      { name: "Google Cloud", logo: googlecloudLogo },
+      { name: "Junit", logo: junitLogo },
       { name: "VS Code", logo: vscodeLogo },
       { name: "Postman", logo: postmanLogo },
       { name: "Compass", logo: mcLogo },
