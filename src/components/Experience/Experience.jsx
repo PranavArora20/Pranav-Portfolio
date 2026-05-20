@@ -2,7 +2,11 @@ import React from 'react';
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans">
+    <section
+      id="experience"
+      className="pt-20 md:pt-24 lg:pt-28 pb-24 px-4 md:px-[7vw] lg:px-[20vw] font-sans"
+      style={{ scrollMarginTop: "100px" }}
+    >
       <div className="text-center mb-16">
         <h2 className="text-3xl sm:text-4xl font-bold text-white">EXPERIENCE</h2>
         <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
