@@ -76,7 +76,7 @@ export const SkillsInfo = [
       { name: "Next JS", logo: nextjsLogo },
       { name: "Tailwind CSS", logo: tailwindcssLogo },
       { name: "Material UI", logo: materialuiLogo },
-      { name: "Bootstrap", logo: bootstrapLogo },      
+      { name: "Bootstrap", logo: bootstrapLogo },
     ],
   },
   {
@@ -169,6 +169,45 @@ export const projects = [
   },
   {
     id: 1,
+    title: "WindStream",
+    description:
+      "WindStream is a production-ready full-stack MERN task management platform that enables teams to collaborate, manage workflows, track progress, and monitor productivity through dashboards, notifications, calendars, and role-based administration.",
+    image: windstream,
+    tags: [
+      "React JS",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Redux toolkit",
+      "Tailwind CSS",
+      "Recharts",
+      "Node JS",
+      "Express JS",
+      "MongoDB",
+    ],
+    github: "https://github.com/PranavArora20/WindStream",
+    webapp: "https://windstreamm.netlify.app/",
+  },
+  {
+    id: 2,
+    title: "HealthyHabits",
+    description:
+      "HealthyHabits helps users build and track healthier routines: log activities and sleep, track meals with nutrition data, set goals, create and join challenges with leaderboards, manage habits and reminders, and engage with the community.",
+    image: healthyhabits,
+    tags: [
+      "React JS",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node JS",
+      "Express JS",
+      "MongoDB",
+    ],
+    github: "https://github.com/PranavArora20/HealthyHabits",
+    webapp: "https://healthy-habits-pi.vercel.app/",
+  },
+  {
+    id: 3,
     title: "TaskFlowPro",
     description:
       "Developed TaskFlow Pro, a scalable employee management system using React and modern web technologies, featuring role-based access, real-time task tracking, and intuitive dashboards to optimize productivity and workflow management",
@@ -177,27 +216,5 @@ export const projects = [
     github:
       "https://github.com/PranavArora20/TaskFlowPro-Employee-Management-System",
     webapp: "https://taskflowpero.netlify.app/",
-  },
-  {
-    id: 2,
-    title: "HealthyHabits",
-    description:
-      "HealthyHabits helps users build and track healthier routines: log activities and sleep, track meals with nutrition data, set goals, create and join challenges with leaderboards, manage habits and reminders, and engage with the community.",
-    image: healthyhabits,
-    tags: ["React JS", "HTML", "CSS", "JavaScript", "Node JS", "Express JS", "MongoDB"],
-    github:
-      "https://github.com/PranavArora20/HealthyHabits",
-    webapp: "https://healthy-habits-pi.vercel.app/",
-  },
-  {
-    id: 3,
-    title: "WindStream",
-    description:
-      "WindStream is a production-ready full-stack MERN task management platform that enables teams to collaborate, manage workflows, track progress, and monitor productivity through dashboards, notifications, calendars, and role-based administration.",
-    image: windstream,
-    tags: ["React JS", "HTML", "CSS", "JavaScript", "Redux toolkit","Tailwind CSS","Recharts", "Node JS", "Express JS", "MongoDB"],
-    github:
-      "https://github.com/PranavArora20/WindStream",
-    webapp: "https://windstreamm.netlify.app/",
   },
 ];
