@@ -3,7 +3,7 @@ export const handleDownloadResume = async (e) => {
 
   const driveFileId = "115jJMGwZF0KRhoClsZUMoT3jWB-Q0YOF";
   const resumeDriveUrl =
-    "https://drive.google.com/file/d/1P9ygwXqU9cgerZ2ElF02ZXiUXzbb5hCb/view?usp=sharing";
+    "https://drive.google.com/file/d/1IrG2knTAsQbWJGJxM8bpCquC3Q3xCDsx/view?usp=sharing";
   const directDownloadUrl = `https://drive.google.com/uc?export=download&id=${driveFileId}`;
 
   window.open(resumeDriveUrl, "_blank", "noopener,noreferrer");
