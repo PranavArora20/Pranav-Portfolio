@@ -1,45 +1,49 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import ResumeNavButton from "./ResumeNavButton";
+import {
+  getActiveSectionFromScroll,
+  scrollToSection,
+} from "../../utils/scrollToSection";
 
 const menuItems = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
-  { id: "work", label: "Projects" },
   { id: "education", label: "Education" },
+  { id: "skills", label: "Skills" },
+  { id: "work", label: "Projects" },
   { id: "contact", label: "Contact" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      setActiveSection(getActiveSectionFromScroll());
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const handleNavigate = (e) => {
+      setActiveSection(e.detail.sectionId);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("portfolio-navigate", handleNavigate);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("portfolio-navigate", handleNavigate);
+    };
   }, []);
 
   const handleMenuItemClick = (sectionId) => {
-    setActiveSection(sectionId);
     setIsOpen(false);
-
-    if (sectionId === "home") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        const navbarHeight = 100;
-        const sectionTop = section.offsetTop - navbarHeight;
-        window.scrollTo({ top: sectionTop, behavior: "smooth" });
-      }
-    }
+    scrollToSection(sectionId);
   };
 
   return (
@@ -63,28 +67,8 @@ const Navbar = () => {
           <span className="text-[#8245ec]">&gt;</span>
         </div>
 
-        {/* Desktop Menu — centered on full navbar width */}
-        <ul className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-x-5 xl:gap-x-7 text-sm xl:text-base text-gray-300 pointer-events-none">
-          {menuItems.map((item) => (
-            <li
-              key={item.id}
-              className={`pointer-events-auto cursor-pointer hover:text-[#8245ec] whitespace-nowrap ${
-                activeSection === item.id ? "text-[#8245ec]" : ""
-              }`}
-            >
-              <button
-                type="button"
-                className="cursor-pointer"
-                onClick={() => handleMenuItemClick(item.id)}
-              >
-                {item.label}
-              </button>
-            </li>
-          ))}
-        </ul>
-
-        {/* Tablet Menu — compact, still centered */}
-        <ul className="hidden md:flex lg:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center flex-wrap justify-center gap-x-2 gap-y-1 max-w-[55%] text-[11px] sm:text-xs text-gray-300 pointer-events-none">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-8 text-gray-300">
           {menuItems.map((item) => (
             <li
               key={item.id}
@@ -105,7 +89,8 @@ const Navbar = () => {
 
         {/* Right side: social icons + mobile toggle */}
         <div className="relative z-10 flex items-center gap-4 shrink-0">
-          <div className="hidden md:flex space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
+            <ResumeNavButton />
             <a
               href="https://github.com/PranavArora20"
               target="_blank"
@@ -162,7 +147,8 @@ const Navbar = () => {
                 </button>
               </li>
             ))}
-            <div className="flex space-x-4">
+            <div className="flex items-center space-x-4">
+              <ResumeNavButton iconSize={24} />
               <a
                 href="https://github.com/PranavArora20"
                 target="_blank"

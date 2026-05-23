@@ -119,6 +119,13 @@ export const SkillsInfo = [
   },
 ];
 
+export const SoftSkillsInfo = [
+  { name: "Problem-Solving", icon: "puzzle" },
+  { name: "Adaptability", icon: "adapt" },
+  { name: "Collaboration", icon: "collab" },
+  { name: "Time Management", icon: "time" },
+];
+
 export const education = [
   {
     id: 0,
@@ -182,15 +189,15 @@ export const projects = [
       "https://github.com/PranavArora20/HealthyHabits",
     webapp: "https://healthy-habits-pi.vercel.app/",
   },
-  // {
-  //   id: 3,
-  //   title: "WindStream",
-  //   description:
-  //     "WindStream is a real-time weather monitoring application that provides users with accurate and up-to-date weather information, forecasts, and alerts.",
-  //   image: windstream,
-  //   tags: ["React JS", "HTML", "CSS", "JavaScript", "Node JS", "Express JS", "MongoDB"],
-  //   github:
-  //     "https://github.com/PranavArora20/HealthyHabits",
-  //   webapp: "https://healthy-habits-pi.vercel.app/",
-  // },
+  {
+    id: 3,
+    title: "WindStream",
+    description:
+      "WindStream is a production-ready full-stack MERN task management platform that enables teams to collaborate, manage workflows, track progress, and monitor productivity through dashboards, notifications, calendars, and role-based administration.",
+    image: windstream,
+    tags: ["React JS", "HTML", "CSS", "JavaScript", "Redux toolkit","Tailwind CSS","Recharts", "Node JS", "Express JS", "MongoDB"],
+    github:
+      "https://github.com/PranavArora20/WindStream",
+    webapp: "https://windstreamm.netlify.app/",
+  },
 ];

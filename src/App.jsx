@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFileDownload } from "react-icons/fa";
 import "./App.css";
 
 import Navbar from "./components/Navbar/Navbar";
@@ -11,6 +12,8 @@ import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import BlurBlob from "./BlurBlob";
+import { handleDownloadResume } from "./utils/downloadResume";
+import { scrollToSection } from "./utils/scrollToSection";
 
 function App() {
   return (
@@ -42,28 +45,42 @@ function App() {
                 Passionate about creating innovative web solutions and turning ideas into reality through code.
                 Specialized in modern web technologies and user experience design.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button 
-                  onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
-                  className="px-8 py-4 bg-gradient-to-r from-[#8245ec] to-[#a855f7] text-white font-bold rounded-full hover:scale-105 transition-transform duration-300 shadow-[0_0_20px_1px_rgba(130,69,236,0.5)]"
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
+                <button
+                  type="button"
+                  onClick={() => scrollToSection("about")}
+                  className="px-8 py-4 bg-gradient-to-r from-[#8245ec] to-[#a855f7] text-white font-bold rounded-full hover:scale-105 transition-all duration-300"
+                  style={{
+                    boxShadow:
+                      "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
+                  }}
                 >
                   Get Started
                 </button>
-                <button 
-                  onClick={() => document.getElementById('work').scrollIntoView({ behavior: 'smooth' })}
-                  className="px-8 py-4 border-2 border-[#8245ec] text-[#8245ec] font-bold rounded-full hover:bg-[#8245ec] hover:text-white transition-all duration-300"
+                <button
+                  type="button"
+                  onClick={() => scrollToSection("work")}
+                  className="px-8 py-4 border-2 border-[#8245ec]/50 text-gray-300 font-bold rounded-full bg-transparent hover:border-[#8245ec] hover:text-white hover:bg-gradient-to-r hover:from-[#8245ec] hover:to-[#a855f7] hover:scale-105 hover:shadow-[0_0_20px_1px_rgba(130,69,236,0.5)] transition-all duration-300"
                 >
                   View Projects
+                </button>
+                <button
+                  type="button"
+                  onClick={handleDownloadResume}
+                  className="group px-8 py-4 border-2 border-gray-600 text-gray-400 font-bold rounded-full bg-transparent hover:border-[#8245ec] hover:text-white hover:bg-gradient-to-r hover:from-[#8245ec] hover:to-[#a855f7] hover:scale-105 hover:shadow-[0_0_20px_1px_rgba(130,69,236,0.5)] transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                  <FaFileDownload className="text-lg group-hover:animate-bounce" />
+                  Download CV
                 </button>
               </div>
             </div>
           </section>
           <About />
-          <Skills />
           <Experience />
+          <Education />
+          <Skills />
           <Work />
           <GitHubStats />
-          <Education />
           <Contact />
           <Footer />
         </div>

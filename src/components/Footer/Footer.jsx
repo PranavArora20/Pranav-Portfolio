@@ -1,15 +1,8 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { scrollToSection } from "../../utils/scrollToSection";
 
 const Footer = () => {
-  // Smooth scroll function
-  const handleScroll = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
       <div className="container mx-auto text-center">
@@ -19,16 +12,17 @@ const Footer = () => {
         {/* Navigation Links - Responsive */}
         <nav className="flex flex-wrap justify-center space-x-4 sm:space-x-6 mt-4">
           {[
+            { name: "Home", id: "home" },
             { name: "About", id: "about" },
-            { name: "Skills", id: "skills" },
             { name: "Experience", id: "experience" },
-            { name: "Projects", id: "work" },
             { name: "Education", id: "education" },
+            { name: "Skills", id: "skills" },
+            { name: "Projects", id: "work" },
             { name: "Contact", id: "contact" },
           ].map((item, index) => (
             <button
               key={index}
-              onClick={() => handleScroll(item.id)}
+              onClick={() => scrollToSection(item.id)}
               className="hover:text-purple-500 text-sm sm:text-base my-1 transition-colors duration-200 cursor-pointer"
             >
               {item.name}
